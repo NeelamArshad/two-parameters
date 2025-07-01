@@ -1,5 +1,5 @@
 ---
-title: "Two-Parameters"
+title: "Two Parameters"
 author: "Neelam Arshad"
 execute: 
   echo: false

@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Two Parameters",
+    "section": "",
+    "text": "\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_n X_n + \\epsilon\n\\]\nwith \\(\\epsilon \\sim \\mathcal{N}(0, \\sigma^2)\\).\n\\[\n\\hat{\\text{height}} = 162.0 + 11.9 \\cdot \\text{sex}_{\\text{Male}}\n\\]\nLinear Model: Predicting Height from Sex\n\n\nTerm\nEstimate\n95% CI Lower\n95% CI Upper\n\n\n\n\n(Intercept)\n162.2\n159.7\n164.6\n\n\nsexMale\n15.9\n12.3\n19.6"
+  },
+  {
+    "objectID": "index.html#summary",
+    "href": "index.html#summary",
+    "title": "Two Parameters",
+    "section": "Summary",
+    "text": "Summary\nHeight is a fundamental physical trait and often varies by sex, age, and other biological characteristics. Using data from the National Health and Nutrition Examination Survey (NHANES), which includes thousands of observations collected across the United States, we investigate the average difference in height between male and female individuals. However, since the NHANES data may not fully represent the physical characteristics of Marine Corps recruits, our estimates could be biased due to differences between the sample population and the target group. We model height, a continuous measure of individuals’ stature in centimeters, as a linear function of sex, where sex is coded as male or female.” On average, males are estimated to be 15.94 cm taller than females, with a 95% confidence interval ranging from 12.32 cm to 19.56 cm, suggesting a substantial and statistically significant difference in height by sex."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Two-Parameters",
+    "section": "",
+    "text": "\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_n X_n + \\epsilon\n\\]\nwith \\(\\epsilon \\sim \\mathcal{N}(0, \\sigma^2)\\).\n\\[\n\\hat{\\text{height}} = 162.0 + 11.9 \\cdot \\text{sex}_{\\text{Male}}\n\\]\nLinear Model: Predicting Height from Sex\n\n\nTerm\nEstimate\n95% CI Lower\n95% CI Upper\n\n\n\n\n(Intercept)\n162.2\n159.7\n164.6\n\n\nsexMale\n15.9\n12.3\n19.6"
+  },
+  {
+    "objectID": "analysis.html#summary",
+    "href": "analysis.html#summary",
+    "title": "Two-Parameters",
+    "section": "Summary",
+    "text": "Summary\nHeight is a fundamental physical trait and often varies by sex, age, and other biological characteristics. Using data from the National Health and Nutrition Examination Survey (NHANES), which includes thousands of observations collected across the United States, we investigate the average difference in height between male and female individuals. However, since the NHANES data may not fully represent the physical characteristics of Marine Corps recruits, our estimates could be biased due to differences between the sample population and the target group. We model height, a continuous measure of individuals’ stature in centimeters, as a linear function of sex, where sex is coded as male or female.” On average, males are estimated to be 15.94 cm taller than females, with a 95% confidence interval ranging from 12.32 cm to 19.56 cm, suggesting a substantial and statistically significant difference in height by sex."
+  }
+]
