@@ -1,0 +1,6 @@
+---
+title: "Two-Parameters"
+author: "Neelam Arshad"
+format: html
+---
+
