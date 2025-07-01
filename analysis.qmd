@@ -12,6 +12,7 @@ library(tidyverse)
 library(primer.data)
 library(tidymodels)
 library(broom)
+library(gt)
 ```
 
 
@@ -26,7 +27,7 @@ x <- nhanes |>
 ```
 
 ## Summary
-Height is a fundamental physical trait and often varies by sex, age, and other biological characteristics. Using data from the National Health and Nutrition Examination Survey (NHANES), which includes thousands of observations collected across the United States, we investigate the average difference in height between male and female individuals. However, since the NHANES data may not fully represent the physical characteristics of Marine Corps recruits, our estimates could be biased due to differences between the sample population and the target group.
+Height is a fundamental physical trait and often varies by sex, age, and other biological characteristics. Using data from the National Health and Nutrition Examination Survey (NHANES), which includes thousands of observations collected across the United States, we investigate the average difference in height between male and female individuals. However, since the NHANES data may not fully represent the physical characteristics of Marine Corps recruits, our estimates could be biased due to differences between the sample population and the target group. We model height, a continuous measure of individuals' stature in centimeters, as a linear function of sex, where sex is coded as male or female.”
 
 
 $$
@@ -34,3 +35,46 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_n X_n + \epsilon
 $$
 
 with $\epsilon \sim \mathcal{N}(0, \sigma^2)$.
+
+```{r}
+fit_height <- linear_reg() |> fit(height ~ sex, data = x) |> tidy(conf.int = TRUE)
+```
+
+
+$$
+\hat{\text{height}} = 162.0 + 11.9 \cdot \text{sex}_{\text{Male}}
+$$
+
+
+```{r}
+#| cache: true
+fit_height <- linear_reg() |> fit(height ~ sex, data = x)
+```
+
+
+```{r}
+# Fit model
+fit_height <- linear_reg() |> 
+  fit(height ~ sex, data = x)
+
+# Tidy output and select key columns
+tidy_table <- tidy(fit_height, conf.int = TRUE) |>
+  select(term, estimate, conf.low, conf.high)
+
+# Make nice-looking table with gt
+tidy_table |> 
+  gt() |> 
+  tab_header(
+    title = "Linear Model: Predicting Height from Sex"
+  ) |>
+  cols_label(
+    term = "Term",
+    estimate = "Estimate",
+    conf.low = "95% CI Lower",
+    conf.high = "95% CI Upper"
+  ) |>
+  fmt_number(
+    columns = c(estimate, conf.low, conf.high),
+    decimals = 1
+  )
+```
